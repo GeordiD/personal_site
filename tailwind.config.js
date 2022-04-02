@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['src/**/*.{astro,svelte}'],
+  content: ['src/**/*.astro'],
   theme: {
     extend: {},
   },

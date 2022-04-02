@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Cover from '../components/Cover.astro';
 
 let title = 'My Astro Site';
 ---
@@ -12,10 +13,6 @@ let title = 'My Astro Site';
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body>
-	<div class="bg-gradient-to-br from-indigo-900 to-green-900 min-h-screen overflow-auto">
-    <div class="text-white text-lg">
-      Hello World
-    </div>
-  </div>
+	<Cover />
 </body>
 </html>
