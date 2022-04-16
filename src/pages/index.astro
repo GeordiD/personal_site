@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Cover from '../components/Cover.astro';
+import About from '../components/About.astro';
 
 let title = 'My Astro Site';
 ---
@@ -13,6 +14,16 @@ let title = 'My Astro Site';
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body>
-	<Cover />
+  <div class="fixed">
+    <Cover />
+  </div>
+  <div class="relative">
+    <div class="min-h-screen">
+      <!-- Spacer -->
+    </div>
+    <div>
+      <About />
+    </div>
+  </div>
 </body>
 </html>
