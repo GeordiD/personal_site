@@ -1,11 +1,39 @@
+---
+import Icon from './Icon.astro';
+---
+
 <div
-  class="bg-blue-400 min-h-screen w-screen overflow-auto text-white text-lg flex justify-center items-center"
+  class="bg-theme-light min-h-screen w-screen overflow-auto text-white text-lg flex justify-center items-center relative"
 >
-  <img 
-    class="w-80 h-80 rounded-full z-10 border-8 border-slate-800"
-    src="/img/serious_headshot_square.jpeg" alt="Headshot of me" 
+  <div class="flex flex-col items-center gap-8 z-10">
+    <img 
+      class="w-60 h-60 rounded-full z-10 border-8 border-theme-dark"
+      src="/img/serious_headshot_square.jpeg" alt="Headshot of me" 
     />
+    <div class="p-8 bg-white bg-opacity-25 rounded-lg backdrop-blur-lg text-theme-text px-12">
+      <div class="max-w-2xl flex flex-col items-center">
+        <p class="text-4xl leading-normal"><b>Hello!</b></p>
+        <p class="text-4xl leading-normal">My Name is <b>Geordi Dosher</b></p>
+        <p class="leading-normal text-center mt-4">I am a full stack engineer with a passion for making websites and apps that users just&nbsp;love.</p>
+        <Icon icon="chevron" class="mt-8 text-theme-med" />
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-0 w-full flex flex-col-reverse gap-8">
+    <div class="bg-theme-med w-full h-36"></div>
+    <div class="bg-theme-med w-full h-24"></div>
+    <div class="bg-theme-med w-full h-20"></div>
+    <div class="bg-theme-med w-full h-16"></div>
+    <div class="bg-theme-med w-full h-12"></div>
+    <div class="bg-theme-med w-full h-8"></div>
+    <div class="bg-theme-med w-full h-4"></div>
+    <div class="bg-theme-med w-full h-2"></div>
+    <div class="bg-theme-med w-full h-1"></div>
+  </div>
+  
 </div>
+
 
 <style>
   .long-boi {
