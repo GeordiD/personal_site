@@ -2,14 +2,29 @@
 
 ---
 
-<div class="bg-theme-med w-full flex items-center flex-col">
-  
-  <!-- <img 
-    class="w-56 h-56 rounded-full"
-    src="/img/serious_headshot_square.jpeg" alt="Headshot of me" 
-    /> -->
-
-  <div class="h-96"></div>
-  <div class="h-96"></div>
-  <div class="h-96"></div>
+<div class="bg-theme-med w-full flex items-center flex-col py-4">
+  <span class="text-white text-4xl font-semibold">About Me</span>
+  <div class="grid grid-flow-col md:grid-cols-2 grid-cols-1 md:grid-rows-2 grid-rows-4 gap-8 max-w-3xl w-full px-8 md:px-0 my-8">
+    <div class="item">Pic</div>
+    <div class="item">Bio</div>
+    <div class="grid grid-cols-6 grid-rows-2 grid-flow-row w-full h-full gap-4">
+      <div class="item col-span-3">OKC</div>
+      <div class="item col-span-3">3+</div>
+      <div class="item col-span-2">Team</div>
+      <div class="item col-span-2">CS</div>
+      <div class="item col-span-2">1%</div>
+    </div>
+    
+    <div class="grid grid-cols-3 grid-rows-2 grid-flow-row w-full h-full gap-4">
+      <div class="item col-span-3">Full Stack</div>
+      <div class="item col-span-2">Tech Stack</div>
+      <div class="item">See Full Resume</div>
+    </div>
+  </div>
 </div>
+
+<style>
+  .item {
+    @apply w-full h-full bg-theme-light rounded-md p-4
+  }
+</style>
