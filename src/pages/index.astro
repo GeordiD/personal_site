@@ -1,25 +1,29 @@
 ---
 import '../styles/global.css';
 import Cover from '../components/Cover.astro';
-import About from '../components/About.astro';
+import About from '../components/About/About.astro';
 import Navbar from '../components/Navbar.astro';
 
 let title = 'My Astro Site';
 ---
+
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
-	<title>{title}</title>
+  <title>{title}</title>
 
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
+
 <body>
   <Navbar class="" />
   <Cover />
   <About />
 </body>
+
 </html>

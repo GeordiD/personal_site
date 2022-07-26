@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@astrojs/svelte': ^0.0.2
@@ -15,7 +15,7 @@ dependencies:
   animejs: 3.2.1
 
 devDependencies:
-  '@astrojs/svelte': 0.0.2_e0b57623246e54d03f806258a078f421
+  '@astrojs/svelte': 0.0.2_4c2xmizenzknap4amjmka6huee
   astro: 0.25.4
   autoprefixer: 10.4.4_postcss@8.4.12
   node-html-parser: 5.3.3
@@ -95,12 +95,12 @@ packages:
     resolution: {integrity: sha512-O6LYL9igYSzxCxDHYWUqEquuuUlMG0UL1SliZ7rF/vx9GwU71TCpsRe4iHZ0bcemM5ju9ihoTzGCmLXzYrNw0g==}
     dependencies:
       svelte: 3.46.6
-      svelte2tsx: 0.5.6_svelte@3.46.6+typescript@4.6.3
+      svelte2tsx: 0.5.6_liohzkyisnst3glff4denqdl5m
     transitivePeerDependencies:
       - typescript
     dev: true
 
-  /@astrojs/svelte/0.0.2_e0b57623246e54d03f806258a078f421:
+  /@astrojs/svelte/0.0.2_4c2xmizenzknap4amjmka6huee:
     resolution: {integrity: sha512-tQw3S22QKeu6iNZ32zc6atJY3+A9NsVyWrnE693a0EI1JlsmpZsZXtog7nR/u9rCjn/WRQZ9Pa4HZ6GL9RJxiA==}
     engines: {node: ^14.15.0 || >=16.0.0}
     peerDependencies:
@@ -109,7 +109,7 @@ packages:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.40_svelte@3.46.6+vite@2.9.1
       postcss-load-config: 3.1.4_postcss@8.4.12
       svelte: 3.46.6
-      svelte-preprocess: 4.10.4_0a0033d5867bac6f6a8828d3bfcd02f8
+      svelte-preprocess: 4.10.4_biadhvmgpowg62uifdj37tic7a
     transitivePeerDependencies:
       - '@babel/core'
       - coffeescript
@@ -289,6 +289,8 @@ packages:
     resolution: {integrity: sha512-BoHhDJrJXqcg+ZL16Xv39H9n+AqJ4pcDrQBGZN+wHxIysrLZ3/ECwCBUch/1zUNhnsXULcONU3Ei5Hmkfk6kiQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.17.0
     dev: true
 
   /@babel/template/7.16.7:
@@ -3682,7 +3684,7 @@ packages:
       svelte: 3.46.6
     dev: true
 
-  /svelte-preprocess/4.10.4_0a0033d5867bac6f6a8828d3bfcd02f8:
+  /svelte-preprocess/4.10.4_biadhvmgpowg62uifdj37tic7a:
     resolution: {integrity: sha512-fuwol0N4UoHsNQolLFbMqWivqcJ9N0vfWO9IuPAiX/5okfoGXURyJ6nECbuEIv0nU3M8Xe2I1ONNje2buk7l6A==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
@@ -3739,7 +3741,7 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
-  /svelte2tsx/0.5.6_svelte@3.46.6+typescript@4.6.3:
+  /svelte2tsx/0.5.6_liohzkyisnst3glff4denqdl5m:
     resolution: {integrity: sha512-B4WZUtoTdVD+F73H1RQEH3Hrv7m2/ahThmAUkjT5CTWRigQaJqYQpSjisCH1Pzfi9B37YikDnAi4u4uxwYM+iw==}
     peerDependencies:
       svelte: ^3.24
@@ -3785,7 +3787,7 @@ packages:
     dev: true
 
   /to-fast-properties/2.0.0:
-    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
+    resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
     dev: true
 

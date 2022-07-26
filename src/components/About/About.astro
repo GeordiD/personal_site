@@ -1,0 +1,46 @@
+---
+import Bio from './Bio.astro';
+import Icon from '../Icon.astro';
+import TechStack from './TechStack.astro';
+---
+
+<div class="flex flex-col items-center w-full gap-10 py-8 bg-theme-med">
+  <div class="flex flex-col w-full max-w-2xl gap-4">
+    <!-- Collage -->
+    <div class="flex gap-4">
+      <div class="object-cover item">
+        <img class="object-cover rounded-md aspect-square" src="/img/2021_headshot_smiling.jpeg"
+          alt="Another photo of me" />
+      </div>
+      <div class="flex flex-col gap-4">
+        <div class="flex-col items-center justify-center item">
+          <span class="text-4xl font-extrabold">OKC</span>
+          <span class="text-xl uppercase">Oklahoma</span>
+        </div>
+        <div class="flex-col items-center justify-center text-xl text-center item">
+          <Icon icon="uco" class="fill-theme-dark" />
+          <p>B.S. Comp&nbsp;Sci</p>
+        </div>
+        <div class="flex-col items-center justify-center item">
+          <!-- @todo make this number dynamic -->
+          <p class="text-4xl font-extrabold">3+</p>
+          <p class="text-xl">Years Exp.</p>
+        </div>
+      </div>
+    </div>
+
+    <Bio />
+    <TechStack />
+  </div>
+</div>
+
+<style>
+  .lang-logo {
+    @apply w-12 h-12 fill-theme-dark;
+    --alt-color: #AD7461;
+  }
+
+  .item {
+    @apply bg-theme-light rounded-md p-4 w-full h-full text-theme-dark flex gap-2
+  }
+</style>

@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         sans: 'Sora',
       },
+      fontSize: {
+        xxs: '.625rem',
+      },
     },
   },
   plugins: [],
