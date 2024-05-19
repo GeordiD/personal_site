@@ -24,9 +24,4 @@ li {
     display: flex;
     justify-content: space-between;
 }
-
-li span {
-    font-family: var(--vp-font-family-mono);
-    font-size: var(--vp-code-font-size);
-}
 </style>
