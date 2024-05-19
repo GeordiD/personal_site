@@ -1,16 +1,20 @@
 ---
-title: Blog
+title: Posts
+noHeader: true
 ---
 <script setup lang="ts">
 import { data as posts } from '/blog/posts.data';
 </script>
 
-<ul>
-    <li v-for="post of posts">
-        <strong><a :href="post.url">{{ post.frontmatter.title }}</a></strong><br/>
-        <span>{{ post.frontmatter.date }}</span>
-    </li>
-</ul>
+<div>
+    <p class="font-bold text-xl">Posts</p>
+    <ul>
+        <li v-for="post of posts">
+            <strong><a :href="post.url">{{ post.frontmatter.title }}</a></strong><br/>
+            <span>{{ post.frontmatter.date }}</span>
+        </li>
+    </ul>
+</div>
 
 <style scoped>
 ul {
