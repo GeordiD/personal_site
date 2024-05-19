@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Geordi Dosher",
   description: "A VitePress Site",
+  base: '/personal_site/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
