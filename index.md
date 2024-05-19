@@ -7,4 +7,8 @@ hero:
   tagline: Full Stack Developer
 ---
 
-WIP
+Hello 👋🏻
+
+This portion of the site is still work in progress while I focus on getting a few blog posts out.
+
+Check back soon for updates 😎
