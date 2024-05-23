@@ -4,7 +4,7 @@ import { SITE_TITLE } from '../consts';
 import SocialLinks from './SocialLinks.astro';
 ---
 
-<header>
+<header class="bg-mono-50">
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
@@ -19,8 +19,7 @@ import SocialLinks from './SocialLinks.astro';
 	header {
 		margin: 0;
 		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		box-shadow: 0 2px 8px rgba(var(--mono-950), 5%);
 	}
 	h2 {
 		margin: 0;
@@ -38,7 +37,7 @@ import SocialLinks from './SocialLinks.astro';
 	}
 	nav a {
 		padding: 1em 0.5em;
-		color: var(--black);
+		color: var(--text);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
