@@ -15,7 +15,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<BaseHead title={title} description={description} />
 		<style>
 			main {
-				width: calc(100% - 2em);
+				width: 100%;
 				max-width: 100%;
 				margin: 0;
 			}
@@ -29,9 +29,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			}
 			.prose {
 				width: 720px;
-				max-width: calc(100% - 2em);
+				max-width: 100%;
 				margin: auto;
-				padding: 1em;
 				color: var(--color-text);
 			}
 			.title {
@@ -63,7 +62,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						)
 					}
 				</div>
-				<div class="prose">
+				<div class="prose p-2 sm:p-4">
 					<div class="title">
 						<div class="date">
 							<FormattedDate date={pubDate} />
