@@ -62,12 +62,14 @@ body {
 	color: var(--color-text);
 	font-size: 18px;
 	line-height: 1.7;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 main {
 	width: 756px;
 	max-width: calc(100% - 2em);
-	margin: auto;
 	padding: 3em 1em;
 }
 
@@ -78,26 +80,6 @@ h4,
 h5,
 h6 {
 	color: var(--color-text);
-}
-
-h1 {
-	@apply text-5xl
-}
-
-h2 {
-	@apply text-4xl
-}
-
-h3 {
-	@apply text-3xl
-}
-
-h4 {
-	@apply text-2xl
-}
-
-h5 {
-	@apply text-xl
 }
 
 strong,
@@ -164,6 +146,17 @@ blockquote {
 hr {
 	border: none;
 	border-top: 1px solid var(--mono-300);
+}
+
+.social-link {
+	padding: 1em 0.5em;
+	color: var(--color-text);
+	border-bottom: 4px solid transparent;
+	text-decoration: none;
+}
+
+.social-link:hover {
+	color: var(--color-mono-500);
 }
 
 @media (max-width: 720px) {
