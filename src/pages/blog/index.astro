@@ -19,8 +19,9 @@ const posts = (await getCollection('blog')).sort(
 	</head>
 	<body>
 		<Header />
-		<main>
-			<section>
+		<main class="flex-grow">
+			<section class="px-8 md:px-12 lg:ml-24">
+				<h1 class="text-4xl mb-8">Posts</h1>
 				<ul>
 					{
 						posts.map((post) => (
