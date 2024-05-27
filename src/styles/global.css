@@ -148,6 +148,17 @@ hr {
 	border-top: 1px solid var(--mono-300);
 }
 
+.social-link {
+	padding: 1em 0.5em;
+	color: var(--color-text);
+	border-bottom: 4px solid transparent;
+	text-decoration: none;
+}
+
+.social-link:hover {
+	color: var(--color-mono-500);
+}
+
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
