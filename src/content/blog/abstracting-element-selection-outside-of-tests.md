@@ -1,6 +1,6 @@
 ---
 title: 'Abstracting Element Selection Outside of Tests'
-description: 'Lorem ipsum dolor sit amet'
+description: 'Showing off my favorite pattern for abstracting away element selection logic from unit tests. Doing this helps you write clean tests very quickly.'
 pubDate: '2024-05-19'
 ---
 
