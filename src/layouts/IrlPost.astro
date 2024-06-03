@@ -8,8 +8,13 @@ import { SITE_DESCRIPTION } from '../consts';
 
 type Props = CollectionEntry<'irl'>['data'];
 
-const { title, pubDate } = Astro.props;
-const heroImage = '';
+const { title, pubDate, heroImg, otherImgs } = Astro.props;
+
+const imgRoute = `/imgs/irl/mothers-day-canvas-frames`;
+const heroImage = heroImg ? `${imgRoute}/${heroImg}` : '';
+const otherImages = otherImgs
+	? otherImgs.map((img) => `${imgRoute}/${img}`)
+	: [];
 ---
 
 <html lang="en">
@@ -22,6 +27,8 @@ const heroImage = '';
 				margin: 0;
 			}
 			.hero-image {
+				max-width: 756px;
+				margin: 0 auto;
 				width: 100%;
 			}
 			.hero-image img {
@@ -36,7 +43,6 @@ const heroImage = '';
 				color: var(--color-text);
 			}
 			.title {
-				margin-bottom: 1em;
 				padding: 1em 0;
 				text-align: center;
 				line-height: 1;
@@ -57,14 +63,7 @@ const heroImage = '';
 		<Header />
 		<main>
 			<article>
-				<div class="shadow-md hero-image">
-					{
-						heroImage && (
-							<img width={1020} height={510} src={heroImage} alt="" />
-						)
-					}
-				</div>
-				<div class="prose p-2 sm:p-4">
+				<div class="prose p-2 sm:p-4 flex flex-col gap-4">
 					<div class="title">
 						<div class="date">
 							<FormattedDate date={pubDate} />
@@ -72,7 +71,15 @@ const heroImage = '';
 						<h1 class="text-5xl">{title}</h1>
 						<hr />
 					</div>
-					<slot />
+					<div class="shadow-md hero-image mb-8">
+						{heroImage && <img src={heroImage} alt="" />}
+					</div>
+					<div>
+						<slot />
+					</div>
+					<div>
+						{otherImages.map((img) => <img src={img} alt="" />)}
+					</div>
 				</div>
 			</article>
 		</main>

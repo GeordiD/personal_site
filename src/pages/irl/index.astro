@@ -21,38 +21,36 @@ const posts = (await getCollection('irl')).sort(
   <body>
     <Header />
     <main class="flex-grow mx-auto px-8 md:px-12">
-      <div class="mb-8 flex flex-col gap-4">
+      <div class="flex flex-col gap-4">
         <h1 class="text-5xl text-center">Real Life Projects</h1>
+        <hr />
         <p>
           When I'm not building software, I like to build things (mostly
           furniture) out of wood. It's a great way to express creativity, get
           away from a screen, and build something I can use every day. Here are
           some projects I've completed:
         </p>
-        <hr />
       </div>
 
       <div
-        class="grid grid-flow-row gird-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+        class="grid grid-flow-row gird-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-8"
       >
         {
           posts.map((posts) => (
-            <div>
+            <div class="hover:bg-mono-200 hover:text-accent p-4 rounded-lg">
               <a
                 href={`/irl/${posts.slug}/`}
-                class="cursor-pointer flex flex-col gap-2"
+                class="cursor-pointer hover:no-underline text-inherit"
               >
                 <Image
                   src="/imgs/irl/mothers-day-canvas-frames/front.png"
                   alt="pic"
-                  class="w-full"
+                  class="w-full mb-4"
                   width="100"
                   height="100"
                 />
-                <p class="text-2xl title hover:text-accent text-text">
-                  {posts.data.title}
-                </p>
-                <p class="-mt-2">
+                <p class="text-2xl title">{posts.data.title}</p>
+                <p class="text-accent">
                   <FormattedDate date={posts.data.finishDate} />
                 </p>
               </a>
