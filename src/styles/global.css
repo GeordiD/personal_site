@@ -69,7 +69,7 @@ body {
 
 main {
 	width: 756px;
-	max-width: calc(100% - 2em);
+	max-width: 100%;
 	padding: 3em 1em;
 }
 
@@ -93,6 +93,7 @@ a {
 
 a:hover {
 	color: var(--color-accent);
+	text-decoration: underline;
 }
 
 textarea {
@@ -133,7 +134,7 @@ pre>code {
 }
 
 .prose p {
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 }
 
 blockquote {
