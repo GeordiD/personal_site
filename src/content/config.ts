@@ -20,8 +20,16 @@ const irl = defineCollection({
 		pubDate: z.coerce.date(),
 		startDate: z.coerce.date().optional(),
 		finishDate: z.coerce.date(),
-		heroImg: z.string().optional(),
-		otherImgs: z.array(z.string()).optional(),
+		heroImg: z.object({
+			src: z.string(),
+			alt: z.string(),
+			caption: z.string().optional(),
+		}).optional(),
+		otherImgs: z.array(z.object({
+			src: z.string(),
+			alt: z.string(),
+			caption: z.string().optional(),
+		})).optional(),
 	})
 })
 
