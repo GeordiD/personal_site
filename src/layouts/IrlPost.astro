@@ -1,0 +1,99 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import { SITE_DESCRIPTION } from '../consts';
+import { Image, Picture } from 'astro:assets';
+
+type Props = CollectionEntry<'irl'>['data'];
+
+const { title, pubDate, heroImg, otherImgs } = Astro.props;
+
+const buildSources = (img: { src: string; alt: string; caption?: string }) => {
+	const imgRoute = `/imgs${Astro.url.pathname}${img.src.split('.')[0]}`;
+	const ext = img.src.split('.')[1];
+
+	return {
+		...img,
+		src: `${imgRoute}.${ext}`,
+		original: `${imgRoute}-og.${ext}`,
+	};
+};
+
+console.log(Astro.url);
+
+const heroImage = heroImg ? buildSources(heroImg) : '';
+const otherImages = otherImgs ? otherImgs.map((img) => buildSources(img)) : [];
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 100%;
+				max-width: 100%;
+				margin: 0;
+			}
+			.hero-image {
+				max-width: 756px;
+				margin: 0 auto;
+				width: 100%;
+			}
+			.hero-image img {
+				display: block;
+				margin: 0 auto;
+				border-radius: 12px;
+			}
+			.prose {
+				width: 720px;
+				max-width: 100%;
+				margin: auto;
+				color: var(--color-text);
+			}
+			.title {
+				padding: 1em 0;
+				text-align: center;
+				line-height: 1;
+			}
+			.title h1 {
+				margin: 0 0 0.5em 0;
+			}
+			.date {
+				margin-bottom: 0.5em;
+			}
+			.last-updated-on {
+				font-style: italic;
+			}
+		</style>
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article>
+				<div class="prose p-2 sm:p-4 flex flex-col gap-4">
+					<div class="title">
+						<div class="date">
+							<FormattedDate date={pubDate} />
+						</div>
+						<h1 class="text-5xl">{title}</h1>
+						<hr />
+					</div>
+					<div class="shadow-md hero-image mb-8">
+						{heroImage && <img src={heroImage.src} alt={heroImage.alt} />}
+					</div>
+					<div>
+						<slot />
+					</div>
+					<div>
+						{otherImages.map((img) => <img src={img.src} alt={img.alt} />)}
+					</div>
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
