@@ -1,0 +1,11 @@
+#!/bin/bash
+
+files=$(ls public/imgs/$1)
+
+for file in $files
+do
+  filename="${file%.*}"
+  ext="${file##*.}"
+
+  sips -Z 1000 -o public/imgs/$1/$filename-rs.$ext public/imgs/$1/$file
+done

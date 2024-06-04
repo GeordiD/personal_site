@@ -24,7 +24,7 @@ const irl = defineCollection({
 			src: z.string(),
 			alt: z.string(),
 			caption: z.string().optional(),
-		}).optional(),
+		}),
 		otherImgs: z.array(z.object({
 			src: z.string(),
 			alt: z.string(),
