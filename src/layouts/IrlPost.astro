@@ -12,8 +12,7 @@ type Props = CollectionEntry<'irl'>['data'];
 const { title, pubDate, heroImg, otherImgs } = Astro.props;
 
 const buildSources = (img: { src: string; alt: string; caption?: string }) => {
-	// TODO make use a slug
-	const imgRoute = `/imgs/irl/mothers-day-canvas-frames/${img.src.split('.')[0]}`;
+	const imgRoute = `/imgs${Astro.url.pathname}${img.src.split('.')[0]}`;
 	const ext = img.src.split('.')[1];
 
 	return {
@@ -22,6 +21,8 @@ const buildSources = (img: { src: string; alt: string; caption?: string }) => {
 		original: `${imgRoute}-og.${ext}`,
 	};
 };
+
+console.log(Astro.url);
 
 const heroImage = heroImg ? buildSources(heroImg) : '';
 const otherImages = otherImgs ? otherImgs.map((img) => buildSources(img)) : [];
