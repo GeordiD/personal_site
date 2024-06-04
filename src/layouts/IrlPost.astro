@@ -12,7 +12,7 @@ type Props = CollectionEntry<'irl'>['data'];
 const { title, pubDate, heroImg, otherImgs } = Astro.props;
 
 const buildSources = (img: { src: string; alt: string; caption?: string }) => {
-	const imgRoute = `/imgs${Astro.url.pathname}${img.src.split('.')[0]}`;
+	const imgRoute = `/imgs${Astro.url.pathname}/${img.src.split('.')[0]}`;
 	const ext = img.src.split('.')[1];
 
 	return {
@@ -24,7 +24,7 @@ const buildSources = (img: { src: string; alt: string; caption?: string }) => {
 
 console.log(Astro.url);
 
-const heroImage = heroImg ? buildSources(heroImg) : '';
+const heroImage = buildSources(heroImg);
 const otherImages = otherImgs ? otherImgs.map((img) => buildSources(img)) : [];
 ---
 
@@ -83,7 +83,7 @@ const otherImages = otherImgs ? otherImgs.map((img) => buildSources(img)) : [];
 						<hr />
 					</div>
 					<div class="shadow-md hero-image mb-8">
-						{heroImage && <img src={heroImage.src} alt={heroImage.alt} />}
+						<img src={heroImage.src} alt={heroImage.alt} />
 					</div>
 					<div>
 						<slot />
