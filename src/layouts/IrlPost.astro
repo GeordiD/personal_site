@@ -54,7 +54,7 @@ const otherImages = otherImgs ? otherImgs.map((img) => buildSources(img)) : [];
 				color: var(--color-text);
 			}
 			.title {
-				padding: 1em 0;
+				padding: 0 0 1em 0;
 				text-align: center;
 				line-height: 1;
 			}
@@ -74,7 +74,7 @@ const otherImages = otherImgs ? otherImgs.map((img) => buildSources(img)) : [];
 		<Header />
 		<main>
 			<article>
-				<div class="prose p-2 sm:p-4 flex flex-col gap-4">
+				<div class="prose px-2 pb-2 sm:px-4 sm:pb-4 flex flex-col gap-4">
 					<div class="title">
 						<div class="date">
 							<FormattedDate date={pubDate} />
@@ -86,7 +86,7 @@ const otherImages = otherImgs ? otherImgs.map((img) => buildSources(img)) : [];
 						<img src={heroImage.src} alt={heroImage.alt} />
 					</div>
 					<div>
-						<slot />
+						<slot is:raw />
 					</div>
 					<div>
 						{otherImages.map((img) => <img src={img.src} alt={img.alt} />)}
