@@ -5,7 +5,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_DESCRIPTION } from '../consts';
-import { Image, Picture } from 'astro:assets';
+import { Image, Picture, imageConfig } from 'astro:assets';
 
 type Props = CollectionEntry<'irl'>['data'];
 
@@ -74,7 +74,7 @@ const otherImages = otherImgs ? otherImgs.map((img) => buildSources(img)) : [];
 		<Header />
 		<main>
 			<article>
-				<div class="prose px-2 pb-2 sm:px-4 sm:pb-4 flex flex-col gap-4">
+				<div class="px-2 pb-2 sm:px-4 sm:pb-4 flex flex-col gap-4">
 					<div class="title">
 						<div class="date">
 							<FormattedDate date={pubDate} />
@@ -85,11 +85,22 @@ const otherImages = otherImgs ? otherImgs.map((img) => buildSources(img)) : [];
 					<div class="shadow-md hero-image mb-8">
 						<img src={heroImage.src} alt={heroImage.alt} />
 					</div>
-					<div>
+					<div class="prose">
 						<slot is:raw />
 					</div>
-					<div>
-						{otherImages.map((img) => <img src={img.src} alt={img.alt} />)}
+					<div class="flex flex-col gap-8">
+						{
+							otherImages.map((img) => (
+								<div>
+									<img src={img.src} alt={img.alt} />
+									{img.caption ? (
+										<p class="mt-2 mb-0 text-center">{img.caption}</p>
+									) : (
+										''
+									)}
+								</div>
+							))
+						}
 					</div>
 				</div>
 			</article>
