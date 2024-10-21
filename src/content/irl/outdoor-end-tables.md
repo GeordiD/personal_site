@@ -2,7 +2,7 @@
 title: "Outdoor End Table"
 pubDate: '2024-06-06'
 startDate: '2023-11-06'
-finishDate: '2024-11-17'
+finishDate: '2023-11-17'
 heroImg: {
   src: 'finished-front.png',
   alt: 'A photograph of the finished outdoor end table',

@@ -9,7 +9,7 @@ import { Image } from 'astro:assets';
 
 const posts = (await getCollection('irl')).sort(
   // sorted newest to oldest
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.finishDate.valueOf() - a.data.finishDate.valueOf(),
 );
 ---
 
