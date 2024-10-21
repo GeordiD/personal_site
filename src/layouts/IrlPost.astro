@@ -9,7 +9,7 @@ import { Image, Picture, imageConfig } from 'astro:assets';
 
 type Props = CollectionEntry<'irl'>['data'];
 
-const { title, pubDate, heroImg, otherImgs } = Astro.props;
+const { title, finishDate, heroImg, otherImgs } = Astro.props;
 
 const buildSources = (img: { src: string; alt: string; caption?: string }) => {
 	const imgRoute = `/imgs${Astro.url.pathname}/${img.src.split('.')[0]}`;
@@ -81,7 +81,7 @@ const otherImages = otherImgs ? otherImgs.map((img) => buildSources(img)) : [];
 				<div class="px-2 pb-2 sm:px-4 sm:pb-4 flex flex-col gap-4">
 					<div class="title">
 						<div class="date">
-							<FormattedDate date={pubDate} />
+							<FormattedDate date={finishDate} />
 						</div>
 						<h1 class="text-5xl">{title}</h1>
 						<hr />
