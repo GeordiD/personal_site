@@ -67,6 +67,10 @@ const otherImages = otherImgs ? otherImgs.map((img) => buildSources(img)) : [];
 			.last-updated-on {
 				font-style: italic;
 			}
+			.extra-image {
+				max-width: 756px;
+				width: 100%;
+			}
 		</style>
 	</head>
 
@@ -84,14 +88,19 @@ const otherImages = otherImgs ? otherImgs.map((img) => buildSources(img)) : [];
 					</div>
 					<div class="shadow-md hero-image mb-8">
 						<img src={heroImage.src} alt={heroImage.alt} />
+						{heroImage.caption ? (
+							<p class="mt-2 mb-0 text-center">{heroImage.caption}</p>
+						) : (
+							''
+						)}
 					</div>
 					<div class="prose">
 						<slot is:raw />
 					</div>
-					<div class="flex flex-col gap-8">
+					<div class="flex flex-col gap-8 items-center">
 						{
 							otherImages.map((img) => (
-								<div>
+								<div class="extra-image">
 									<img src={img.src} alt={img.alt} />
 									{img.caption ? (
 										<p class="mt-2 mb-0 text-center">{img.caption}</p>
