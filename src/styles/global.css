@@ -35,23 +35,12 @@
 }
 
 @font-face {
-  font-family: 'Atkinson';
-  src: url('/fonts/atkinson-regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Atkinson';
-  src: url('/fonts/atkinson-bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+  font-family: 'Raleway';
+  src: url(/fonts/raleway.ttf) format('truetype');
 }
 
 body {
-  font-family: 'Atkinson', sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -61,7 +50,7 @@ body {
   overflow-wrap: break-word;
   color: var(--color-text);
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

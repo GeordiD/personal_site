@@ -22,4 +22,8 @@
   ul {
     @apply list-disc pl-4;
   }
+
+  li {
+    @apply my-1;
+  }
 }
