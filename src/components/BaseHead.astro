@@ -22,20 +22,10 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
-<link
-	rel="preload"
-	href="/fonts/atkinson-regular.woff"
-	as="font"
-	type="font/woff"
-	crossorigin
-/>
-<link
-	rel="preload"
-	href="/fonts/atkinson-bold.woff"
-	as="font"
-	type="font/woff"
-	crossorigin
-/>
+<link rel="preload" href="/fonts/PTSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="/fonts/PTSerif-Bold.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="/fonts/PTSerif-Italic.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="/fonts/PTSerif-BoldItalic.ttf" as="font" type="font/ttf" crossorigin>
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
