@@ -1,7 +1,8 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import { Picture } from 'astro:assets';
+import headshot from '../assets/profile/apricot-headshot-smiling.jpg';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -14,9 +15,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main class="m-auto flex flex-col gap-8">
 			<div class="flex flex-col items-center gap-8">
-				<img
+				<Picture
+					src={headshot}
+					alt="Geordi Dosher"
+					formats={['avif', 'webp']}
+					fallbackFormat="jpg"
+					width={480}
+					widths={[240, 480]}
+					sizes="240px"
+					loading="eager"
+					fetchpriority="high"
 					class="object-cover w-60 h-60 rounded-md aspect-square shadow-lg"
-					src="/imgs/headshot_square.jpeg"
 				/>
 				<div class="flex flex-col gap-2 items-center">
 					<p class="text-4xl">
