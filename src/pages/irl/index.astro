@@ -39,7 +39,7 @@ const posts = (await getCollection('irl')).sort(
         {
           posts.map((post) => {
             const heroImage = getIrlImage(post.slug, post.data.heroImg.src);
-            const widths = responsiveWidths(heroImage, [320, 640, 960]);
+            const widths = responsiveWidths(heroImage, [320, 480, 640, 768]);
 
             return (
               <div class="hover:bg-mono-200 hover:text-accent p-4 rounded-lg">
