@@ -2,6 +2,8 @@
 title: 'How I use Claude Code'
 description: 'Tips and Tricks for how I get the most out of Claude Code'
 pubDate: '2025-09-27'
+author:
+  - name: 'Geordi Dosher'
 ---
 
 I've been using Claude Code since June 2025, and it's become my go-to agent both at work and at home. It has unlocked new development approaches and fundamentally changed how I tackle problems. Even better, it's significantly lowered the barrier to working on personal projects, making it much easier to grab my laptop on an evening or weekend and quickly implement a feature or fix a bug.

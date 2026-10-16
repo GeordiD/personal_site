@@ -2,6 +2,8 @@
 title: 'Abstracting Element Selection Outside of Tests'
 description: 'Showing off my favorite pattern for abstracting away element selection logic from unit tests. Doing this helps you write clean tests very quickly.'
 pubDate: '2024-05-19'
+author:
+  - name: 'Geordi Dosher'
 ---
 
 When writing unit tests for a component, we’re almost assuredly going to be referencing an element on the screen in our tests. The unit testing framework will give you some ability to track down the element or component you need, and then you can act and assert on it. For example, you might have a test like this: 

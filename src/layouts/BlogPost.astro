@@ -5,9 +5,11 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = Omit<CollectionEntry<'blog'>['data'], 'author'> & {
+	author?: CollectionEntry<'blog'>['data']['author'];
+};
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, author, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <html lang="en">
@@ -42,6 +44,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.title h1 {
 				margin: 0 0 0.5em 0;
 			}
+			.byline {
+				margin: 0 0 1em;
+				line-height: 1.5;
+			}
 			.date {
 				margin-bottom: 0.5em;
 			}
@@ -75,6 +81,16 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 							}
 						</div>
 						<h1 class="text-5xl">{title}</h1>
+						{author && author.length > 0 && (
+							<p class="byline">
+								By {author.map(({ name, link }, index) => (
+									<>
+										{index > 0 && (index === author.length - 1 ? ' & ' : ', ')}
+										{link ? <a href={link} target="_blank" rel="noopener noreferrer">{name}</a> : name}
+									</>
+								))}
+							</p>
+						)}
 						<hr />
 					</div>
 					<slot />
